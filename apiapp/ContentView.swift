@@ -1,12 +1,10 @@
-
-
 import SwiftUI
 
 struct ProductMeta: Codable {
     var products: [Product]
 }
 
-struct Product: Codable {
+struct Product: Codable, Hashable {
     var id: Int?
     var title: String?
     var price: Double?
@@ -17,30 +15,23 @@ struct Product: Codable {
 
 struct ContentView: View {
     @State var products: [Product] = []
+    @State var selectedProduct: Product?
 
     var body: some View {
-        List(products, id: \.id) { product in
-            
-            //NavigationLink(destination: ItemView, label: View){
-                //hele HStack skal inn her
-            //}
-            
-            
-            
-            HStack {
-                Image(systemName: "photo")
-                    //.data(url: URL(string: product.image ?? "")!)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 50, height: 50)
-                VStack(alignment: .leading) {
-                    Text(product.title ?? "")
-                        .font(.headline)
-                    Text("$\(product.price ?? 1, specifier: "%.2f")")
-                        .font(.subheadline)
-                }
-                
-            }
+            NavigationView {
+                List(products, id: \.id) { product in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(product.title ?? "")
+                                    .font(.headline)
+                                Text("$\(product.price ?? 1, specifier: "%.2f")")
+                                    .font(.subheadline)
+                            }
+                            NavigationLink(destination: ProductView(product: product), tag: product, selection: $selectedProduct) {
+                                            }
+                        }
+                        .navigationTitle("Products")
+                    }
         }
         .onAppear {
             let url = URL(string: "https://dummyjson.com/products")!
