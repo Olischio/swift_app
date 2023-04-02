@@ -10,26 +10,29 @@
 import Foundation
 import SwiftUI
 
-struct userDataView: View {
+struct UserDataView: View {
     var userData: loginResponse
     var body: some View {
         
+        AsyncImage(url: userData.image) {image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        } placeholder: {
+            ProgressView()
+        }
+        
+        
         Text(userData.username ?? "")
             .font(.largeTitle)
-            .foregroundColor(.blue)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.yellow)
         
         Text(userData.firstName ?? "")
             .font(.largeTitle)
-            .foregroundColor(.blue)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.yellow)
+        
         
         Text(userData.lastName ?? "")
             .font(.largeTitle)
-            .foregroundColor(.blue)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.yellow)
+           
+        
     }
 }

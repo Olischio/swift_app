@@ -15,7 +15,7 @@
 		74A0B12729D56B3500E78B52 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0B12629D56B3500E78B52 /* LoginView.swift */; };
 		74A0B12B29D5710B00E78B52 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0B12A29D5710B00E78B52 /* ProductsView.swift */; };
 		74A0B12D29D75A6100E78B52 /* UserDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0B12C29D75A6100E78B52 /* UserDataView.swift */; };
-		74A0B12F29D763AF00E78B52 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0B12E29D763AF00E78B52 /* HomeView.swift */; };
+		74A0B12F29D763AF00E78B52 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A0B12E29D763AF00E78B52 /* CartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +28,7 @@
 		74A0B12629D56B3500E78B52 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		74A0B12A29D5710B00E78B52 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
 		74A0B12C29D75A6100E78B52 /* UserDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataView.swift; sourceTree = "<group>"; };
-		74A0B12E29D763AF00E78B52 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		74A0B12E29D763AF00E78B52 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 			children = (
 				748EDA6429CE654900180230 /* apiappApp.swift */,
 				74A0B12C29D75A6100E78B52 /* UserDataView.swift */,
-				74A0B12E29D763AF00E78B52 /* HomeView.swift */,
+				74A0B12E29D763AF00E78B52 /* CartView.swift */,
 				742FE59D29D21D8700D07017 /* ProductView.swift */,
 				74A0B12629D56B3500E78B52 /* LoginView.swift */,
 				74A0B12A29D5710B00E78B52 /* ProductsView.swift */,
@@ -154,7 +154,7 @@
 			files = (
 				748EDA6729CE654900180230 /* ContentView.swift in Sources */,
 				74A0B12D29D75A6100E78B52 /* UserDataView.swift in Sources */,
-				74A0B12F29D763AF00E78B52 /* HomeView.swift in Sources */,
+				74A0B12F29D763AF00E78B52 /* CartView.swift in Sources */,
 				742FE59E29D21D8700D07017 /* ProductView.swift in Sources */,
 				74A0B12B29D5710B00E78B52 /* ProductsView.swift in Sources */,
 				748EDA6529CE654900180230 /* apiappApp.swift in Sources */,

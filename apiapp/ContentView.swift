@@ -18,12 +18,12 @@ struct ContentView: View {
         TabView {
             ProductsView()
                 .tabItem {
-                    Label("Home", systemImage: "house.fill")
+                    Label("Products", systemImage: "briefcase")
                 }
             
-            HomePage()
+            CartView()
                 .tabItem {
-                    Label("TobeCart", systemImage: "person.crop.circle.fill")
+                    Label("Cart", systemImage: "cart")
                 }
             
             LoginPage()
@@ -34,13 +34,11 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-        
-        
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+  //  static var previews: some View {
+    //    ContentView()
+   // }
+//}
 
 extension Image {
     func data(url: URL) -> Self {

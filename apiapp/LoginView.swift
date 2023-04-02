@@ -36,7 +36,7 @@ struct LoginPage: View {
                             .foregroundColor(.white)
                             .cornerRadius(10)
                 }
-                NavigationLink(destination: userDataView(userData:loggedInUser), isActive: $showUserPage) {
+                NavigationLink(destination: UserDataView(userData:loggedInUser), isActive: $showUserPage) {
                                     EmptyView()
                                 }
                 
@@ -103,6 +103,6 @@ struct loginResponse: Codable {
     var firstName: String?
     var lastName: String?
     var gender: String?
-    var image: String?
+    var image: URL?
     var token: String?
 }

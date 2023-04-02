@@ -12,22 +12,24 @@ struct ProductView: View {
     var product: Product
     var body: some View {
         
+        
         Text(product.title ?? "")
             .font(.largeTitle)
-            .foregroundColor(.blue)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.yellow)
+        
+        AsyncImage(url: product.thumbnail) {image in
+            image
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+        } placeholder: {
+            ProgressView()
+        }
+
         
         Text(product.description ?? "")
-            .font(.largeTitle)
-            .foregroundColor(.blue)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.yellow)
+            .font(.body)
+          
         
-        Text(product.category ?? "")
-            .font(.largeTitle)
-            .foregroundColor(.blue)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.yellow)
+        
+            
     }
 }
