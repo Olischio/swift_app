@@ -14,6 +14,8 @@ struct UserDataView: View {
     var userData: loginResponse
     var body: some View {
         
+        //Denne Koden viser frem BrukerData fra structen som dataen har blitt lagret i etter API kallet
+        
         AsyncImage(url: userData.image) {image in
             image
                 .resizable()
@@ -33,6 +35,5 @@ struct UserDataView: View {
         Text(userData.lastName ?? "")
             .font(.largeTitle)
            
-        
     }
 }
